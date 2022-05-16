@@ -1,13 +1,12 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import random
 
 
 def guessing_game():
-    # Exercise 1
-    # Number guessing game
+    """
+    Exercise 1
+    Number guessing game
+    :return:
+    """
 
     # create random integer between 0 and 100
     rand_int = random.randint(0, 100)
@@ -21,14 +20,63 @@ def guessing_game():
         if guessed_int < rand_int:
             print('Too low')
 
-        if guessed_int > rand_int:
+        elif guessed_int > rand_int:
             print('Too high')
 
-        if guessed_int == rand_int:
+        else:
             print('Just right')
             break
 
 
+def mysum(*numbers):
+    """
+    Exercise 2
+    Summing numbers
+    :param numbers:
+    :return:
+    """
+
+    # initiate result
+    result = 0
+
+    for number in numbers:
+        result += number
+
+    return result
+
+
+def run_timing():
+    """
+
+    :return:
+    """
+    number_of_runs = 0
+    total_time = 0
+
+    while True:
+        user_input = input("Enter 10 km run time: ")
+
+        if not user_input:
+            break
+
+        else:
+            try:
+                run_time_as_float = float(user_input)
+                number_of_runs += 1
+                total_time += run_time_as_float
+            except ValueError as e:
+                print("Hey! That`s not a valid number!")
+
+        try:
+            average_time = total_time / number_of_runs
+            print(f'Average of {average_time:.2f}, over {number_of_runs} runs')
+        except ZeroDivisionError as e:
+            print('Keine gültige Zeitangabe')
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    guessing_game()
+    # guessing_game()
+    # print(mysum(1, 2, 3))
+    # print(mysum(*[4, 5, 6]))
+    run_timing()
