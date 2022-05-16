@@ -1,11 +1,9 @@
-from main import *
+from Exercises.ExcercisesNumeric import *
 from io import StringIO
 import random
 
-
-def test_answer():
-    assert mysum(5) == 5
-
+# monkeypatch = "mock"
+# capsys = return a ``(out, err)`` namedtuple
 
 def test_correct(monkeypatch, capsys):
     random.seed(0)  # first randint will be 49
