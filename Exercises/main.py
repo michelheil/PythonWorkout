@@ -1,5 +1,5 @@
-from ExercisesStrings import *
-from ExercisesNumeric import *
+from workout_strings import *
+from workout_numeric import *
 from caching import *
 from timeit import Timer
 

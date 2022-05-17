@@ -1,4 +1,4 @@
-from Exercises.ExercisesNumeric import *
+from Exercises.workout_numeric import *
 from io import StringIO
 import random
 

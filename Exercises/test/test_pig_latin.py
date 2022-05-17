@@ -1,4 +1,4 @@
-from Exercises.ExercisesStrings import pig_latin
+from Exercises.workout_strings import pig_latin
 
 def test_word_starting_with_vowel():
     in_str = "Atlas"
