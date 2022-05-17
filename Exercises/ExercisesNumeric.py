@@ -66,17 +66,11 @@ def run_timing():
                 total_time += run_time_as_float
             except ValueError as e:
                 print("Hey! That`s not a valid number!")
+                print(e)
 
         try:
             average_time = total_time / number_of_runs
             print(f'Average of {average_time:.2f}, over {number_of_runs} runs')
         except ZeroDivisionError as e:
             print('Keine gültige Zeitangabe')
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    # guessing_game()
-    # print(mysum(1, 2, 3))
-    # print(mysum(*[4, 5, 6]))
-    run_timing()
+            print(e)

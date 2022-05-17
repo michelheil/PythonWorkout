@@ -1,4 +1,4 @@
-from Exercises.ExcercisesNumeric import *
+from Exercises.ExercisesNumeric import *
 from io import StringIO
 import random
 
